@@ -8,6 +8,10 @@ html, body{
     padding: 0;
     margin: 0;
 }
+p::selection, h2::selection, h3::selection, h1::selection{
+    background-color: #656565;
+    color: #fff;
+}
 ::-webkit-scrollbar{
     width: .5rem;
     background-color: #000000;
@@ -95,6 +99,10 @@ section .txt{
 }
 section .img{
     width: auto;
+    display: grid;
+}
+section .img a {
+    margin: 1em;
 }
 .testimg{
     /* width: 30em; */
@@ -102,7 +110,7 @@ section .img{
     background-color: rgb(18, 18, 18);
     transition: .2s;
 }
-.img:hover .testimg{
+.img a:hover .testimg{
     scale: 101%;
     transform: translateY(-5%);
 }
@@ -133,5 +141,8 @@ img{
     }
     section.reversed h2{
         margin: .3em auto;
+    }
+    #bonus{
+        display: none;
     }
 }
