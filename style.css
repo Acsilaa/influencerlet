@@ -1,0 +1,137 @@
+/*lila, fehér, zöld*/
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+html, body{
+    background-color: #000000;
+    overflow-x: hidden;
+    width: 100vw;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+::-webkit-scrollbar{
+    width: .5rem;
+    background-color: #000000;
+    border: 1px solid #151515;
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 4px;
+    background-color: #656565;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+body *{
+    font-family: 'Quicksand', sans-serif;
+    color: #e0e0e0;
+}
+main{
+    flex-grow: 1;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em 0;
+}
+main *{
+    margin: initial;
+}
+footer{
+    height: 2em;
+    background: #151515;
+    width: 100vw;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    color: #7300d1;
+    font-size: 2.5rem;
+    margin: .3rem auto;
+    margin-bottom: 0;
+}
+#mainh{
+    z-index: 2;
+}
+#mainheading .shadow{
+    margin: 0;
+    transform: rotateX(140deg) skew(-30deg);
+    color: #4a4a4a79;
+    position: relative;
+    top: -.5em;
+    left: .25em;
+    z-index: 1;
+    user-select: none;
+}
+h2{
+    color: #028a06;
+    font-size: 1.75rem;
+    margin: .3em auto;
+    text-align: left;
+}
+section.reversed h2{
+    margin-left: 2rem;
+}
+p{
+    margin: 1rem;
+}
+
+section{
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3em;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.154);
+    padding-bottom: 1em;
+}
+section .txt{
+    width: 60%;
+}
+section .img{
+    width: auto;
+}
+.testimg{
+    /* width: 30em; */
+    height: 15em;
+    background-color: rgb(18, 18, 18);
+    transition: .2s;
+}
+.img:hover .testimg{
+    scale: 101%;
+    transform: translateY(-5%);
+}
+@keyframes die{
+    from{}
+    to{
+        opacity: 0;
+    }
+}
+.die{
+    animation: die 1s forwards;
+}
+img{
+    user-select: none;
+}
+
+@media only screen and (max-width:1000px){
+    section{
+        display: grid;
+    }
+    section .txt, section .img{
+        width: 100%;
+    }
+    section .img{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    section.reversed h2{
+        margin: .3em auto;
+    }
+}
